@@ -1,6 +1,6 @@
 /* Register.css - Retro Terminal Landscape Style */
 :root {
-    --bg-color: #ffffff;
+    --bg-color: #000000;
     --text-color: #000000;
     --accent-color: #45a29e;
     --error-color: #ff3333;
