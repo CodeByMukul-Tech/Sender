@@ -1,0 +1,42 @@
+/* Sidebar.css */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 100vh;
+    background: #ffffff;
+    /* border-right: 2px solid #000000; */
+    box-shadow: 5px 0 40px #000000;
+    padding: 20px;
+    font-family: 'Courier New', monospace;
+  }
+  
+  .sidebar-logo {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+  }
+  
+  .sidebar-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar-link {
+    display: block;
+    color: #000000;
+    padding: 10px 0;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+  
+  .sidebar-link:hover,
+  .sidebar-link.active {
+    background: #000000;
+    color: #ffffff;
+    padding-left: 10px;
+    font-family: monospace;
+  }
+  

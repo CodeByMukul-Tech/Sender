@@ -1,0 +1,119 @@
+/* root vars for easy theming */
+:root {
+  --primary: #ffffff;
+  --accent: #ffffff;
+  --light: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--primary);
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo styling */
+.logo {
+  color: var(--accent);
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px rgb(255, 255, 255);
+  transition: transform 0.2s;
+}
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Center area (search + image) */
+.navbar-center {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.search-input {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 999px;
+  outline: none;
+  width: 200px;
+  transition: box-shadow 0.2s;
+}
+.search-input:focus {
+  box-shadow: 0 0 8px var(--accent);
+}
+
+.search-btn {
+  background: var(--accent);
+  border: none;
+  color: var(--light);
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.2s, transform 0.1s;
+}
+.search-btn:hover {
+  background: #000000;
+  color: white;
+}
+.search-btn:active {
+  transform: scale(0.95);
+}
+
+/* Car image wrapper & animation */
+.car-img-wrapper {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.car-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  animation: glow 2s infinite ease-in-out;
+}
+
+/* glowing red back‑shadow keyframes */
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 10px 80px var(--accent);
+  }
+  50% {
+    box-shadow: 0 10px 20px var(--accent);
+  }
+}
+
+/* Right‑side menu */
+.navbar-right {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+}
+.navbar-right li a {
+  color: var(--light);
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.navbar-right li a:hover {
+  background: rgb(0, 0, 0);
+  color: white;
+}
